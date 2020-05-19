@@ -47,6 +47,8 @@ public:
         return vehicle_api_.get();
     }
 
+    virtual void jsonSettingsUpdate() override;
+
 protected:
     virtual void resetImplementation() override;
 

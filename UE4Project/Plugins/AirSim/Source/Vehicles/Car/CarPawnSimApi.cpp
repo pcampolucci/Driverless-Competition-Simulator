@@ -33,6 +33,10 @@ void CarPawnSimApi::createVehicleApi(ACarPawn* pawn, const msr::airlib::GeoPoint
     pawn_api_ = std::unique_ptr<CarPawnApi>(new CarPawnApi(pawn, getGroundTruthKinematics(), vehicle_api_.get()));
 }
 
+void CarPawnSimApi::jsonSettingsUpdate() {
+    
+}
+
 std::string CarPawnSimApi::getRecordFileLine(bool is_header_line) const
 {
     std::string common_line = PawnSimApi::getRecordFileLine(is_header_line);

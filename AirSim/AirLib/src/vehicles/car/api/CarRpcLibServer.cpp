@@ -62,6 +62,11 @@ CarRpcLibServer::CarRpcLibServer(ApiProvider* api_provider, string server_addres
 		return CarRpcLibAdapators::RefereeState(RpcLibServerBase::getWorldSimApi()->getRefereeState());
 	});
 
+    (static_cast<rpc::server*>(getServer()))->
+		bind("jsonSettingsUpdate", [&](const std::string& vehicle_name) -> void {
+        getVehicleSimApi(vehicle_name)->jsonSettingsUpdate();
+	});
+
 }
 
 //required for pimpl

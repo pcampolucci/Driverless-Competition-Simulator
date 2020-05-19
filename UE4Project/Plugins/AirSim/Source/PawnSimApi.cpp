@@ -363,6 +363,10 @@ void PawnSimApi::toggleTrace()
     }
 }
 
+void PawnSimApi::jsonSettingsUpdate() {
+    // not implemented on purpose because this will be ovewritten by CarPawnSimApi
+}
+
 void PawnSimApi::setTraceLine(const std::vector<float>& color_rgba, float thickness) {
     FLinearColor color {color_rgba[0], color_rgba[1], color_rgba[2], color_rgba[3]};
     trace_color_ = color.ToFColor(true);
