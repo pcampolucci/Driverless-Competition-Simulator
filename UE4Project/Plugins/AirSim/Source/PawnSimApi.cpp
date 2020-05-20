@@ -365,6 +365,8 @@ void PawnSimApi::toggleTrace()
 
 void PawnSimApi::jsonSettingsUpdate() {
     // not implemented on purpose because this will be ovewritten by CarPawnSimApi
+        UAirBlueprintLib::LogMessageString("TESTING: ", "this shouldnt' happen", LogDebugLevel::Failure);
+
 }
 
 void PawnSimApi::setTraceLine(const std::vector<float>& color_rgba, float thickness) {

@@ -34,7 +34,7 @@ void CarPawnSimApi::createVehicleApi(ACarPawn* pawn, const msr::airlib::GeoPoint
 }
 
 void CarPawnSimApi::jsonSettingsUpdate() {
-    
+    UAirBlueprintLib::LogMessageString("TESTING: ", "OMGOMGOMGOMGOMGOMGOMGOMGOMGOMGOMGOMG", LogDebugLevel::Failure);
 }
 
 std::string CarPawnSimApi::getRecordFileLine(bool is_header_line) const

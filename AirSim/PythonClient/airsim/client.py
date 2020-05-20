@@ -1125,3 +1125,7 @@ class CarClient(VehicleClient, object):
         """
         controls_raw = self.client.call('getCarControls', vehicle_name)
         return CarControls.from_msgpack(controls_raw)
+
+
+    def jsonSettingsUpdate(self, vehicle_name=''):
+        self.client.call('jsonSettingsUpdate', vehicle_name)
